@@ -3,9 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site</title>
+    <title>Mizahım Ben</title>
+    <style>
+      BAKİM
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        article p, ul li {
+            color: #666;
+        }
+
+        /* Galeri Stilleri */
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            margin: 10px;
+        }
+
+        .video-gallery iframe {
+            margin: 10px;
+            border: none;
+        }
+
+        /* Espri ve Yorumlar */
+        #espri-yorumlari {
+            background-color: #ffeb3b;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        #espri-yorumlari input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 1rem;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #espri-yorumlari button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #espri-yorumlari button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-<body>3 dolarlık holding
-  
+<body>
+    <header>
+        <h1>Mizah Dünyası</h1>
+        <nav>
+            <ul>
+                <li><a href="#gulduren-makaleler">Güldüren Makaleler</a></li>
+                <li><a href="#komik-goruntuler">Komik Görüntüler</a></li>
+                <li><a href="#espriler">Espriler</a></li>
+                <li><a href="#videolar">Komik Videolar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gulduren-makaleler">
+        <h2>Güldüren Makaleler</h2>
+        <article>
+            <h3>Bir Karpuzun Hayatı</h3>
+            <p>Bir karpuzun hayatı düşündüğünüzden çok daha zordur. Onlar tarlada başlar, çok tatlı olmaları beklenir, ama bir yandan her zaman bir bıçak tehdidi altındadırlar...</p>
+        </article>
+        <article>
+            <h3>Evcil Hayvanın Yalanları</h3>
+            <p>Evcil hayvanlar sürekli yalan söyler. "Benim hiç işim yok, sadece uyuyorum" diyorlar ama hep o koltuğu işgal etmek için tuhaf stratejiler geliştiriyorlar!</p>
+        </article>
+    </section>
+
+    <section id="komik-goruntuler">
+        <h2>Komik Görüntüler</h2>
+        <div class="image-gallery">
+            <img src="https://via.placeholder.com/300x200?text=Kediler+Her+Zaman+Komik" alt="Komik Kedi">
+            <img src="https://via.placeholder.com/300x200?text=Kediler+Yine+Komik" alt="Komik Kedi">
+            <img src="https://via.placeholder.com/300x200?text=Köpekler+Gülerken" alt="Komik Köpek">
+        </div>
+    </section>
+
+    <section id="espriler">
+        <h2>Espriler</h2>
+        <ul id="espri-listesi">
+            <li>Bir köpek neden bilgisayar kullanmaz? Çünkü fareyi yakalayamaz!</li>
+            <li>Bir karpuz neden telefonunu kaybetmiş? Çünkü her zaman çok meşgulmüş!</li>
+            <li>Matematik kitabı neden üzgündü? Çünkü çok problemi varmış!</li>
+        </ul>
+
+        <div id="espri-yorumlari">
+            <h3>Espriye Yorum Yapın:</h3>
+            <input type="text" id="yorum-input" placeholder="Bir yorum yazın...">
+            <button onclick="yorumEkle()">Yorum Yap</button>
+            <ul id="yorumlar"></ul>
+        </div>
+    </section>
+
+    <section id="videolar">
+        <h2>Komik Videolar</h2>
+        <div class="video-gallery">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mizahım Ben -Küfürsüz Eğlence</p>
+    </footer>
+
+    <script>
+    
+        function yorumEkle() {
+            var yorumInput = document.getElementById('yorum-input');
+            var yorumlarListesi = document.getElementById('yorumlar');
+            var yeniYorum = document.createElement('li');
+            yeniYorum.textContent = yorumInput.value;
+            
+            if (yorumInput.value.trim() !== "") {
+                yorumlarListesi.appendChild(yeniYorum);
+                yorumInput.value = ''; // Yorum gönderildikten sonra inputu temizle
+            } else {
+                alert("Lütfen geçerli bir yorum girin.");
+            }
+        }
+
+      
+        window.onload = function() {
+            alert("Mizah Dünyamız Mizhahım Bene Hoşgeldiniz! Eğlenceli içerikler sizi bekliyor.");
+        }
+    </script>
 </body>
 </html>
