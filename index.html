@@ -57,7 +57,7 @@
             color: #666;
         }
 
-        /* Galeri Stilleri */
+        
         .image-gallery {
             display: flex;
             justify-content: space-around;
@@ -76,7 +76,7 @@
             border: none;
         }
 
-        /* Espri ve Yorumlar */
+
         #espri-yorumlari {
             background-color: #ffeb3b;
             padding: 20px;
@@ -115,67 +115,52 @@
             bottom: 0;
             width: 100%;
         }
+
+       .baslık {
+
+
+        background: #697c3b;
+        border-radius: 20px;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mizah Dünyası</h1>
-        <nav>
-            <ul>
-                <li><a href="#gulduren-makaleler">Güldüren Makaleler</a></li>
-                <li><a href="#komik-goruntuler">Komik Görüntüler</a></li>
-                <li><a href="#espriler">Espriler</a></li>
-                <li><a href="#videolar">Komik Videolar</a></li>
-            </ul>
-        </nav>
+        <h1 class="baslık">"MizahımBEN"</h1>
+    <p>Bu site, Mizahım Ben'nin web sayfasıdır. Esprileri Kendimiz yazmaktayız. Bazıları derin anlamlar taşır. Kimseye karşı art niyetimiz bulunmamaktadır</p>
+    
+
     </header>
 
-    <section id="gulduren-makaleler">
-        <h2>Güldüren Makaleler</h2>
-        <article>
-            <h3>Bir Karpuzun Hayatı</h3>
-            <p>Bir karpuzun hayatı düşündüğünüzden çok daha zordur. Onlar tarlada başlar, çok tatlı olmaları beklenir, ama bir yandan her zaman bir bıçak tehdidi altındadırlar...</p>
-        </article>
-        <article>
-            <h3>Evcil Hayvanın Yalanları</h3>
-            <p>Evcil hayvanlar sürekli yalan söyler. "Benim hiç işim yok, sadece uyuyorum" diyorlar ama hep o koltuğu işgal etmek için tuhaf stratejiler geliştiriyorlar!</p>
-        </article>
-    </section>
-
-    <section id="komik-goruntuler">
-        <h2>Komik Görüntüler</h2>
-        <div class="image-gallery">
-            <img src="https://via.placeholder.com/300x200?text=Kediler+Her+Zaman+Komik" alt="Komik Kedi">
-            <img src="https://via.placeholder.com/300x200?text=Kediler+Yine+Komik" alt="Komik Kedi">
-            <img src="https://via.placeholder.com/300x200?text=Köpekler+Gülerken" alt="Komik Köpek">
-        </div>
-    </section>
 
     <section id="espriler">
         <h2>Espriler</h2>
         <ul id="espri-listesi">
-            <li>Bir köpek neden bilgisayar kullanmaz? Çünkü fareyi yakalayamaz!</li>
-            <li>Bir karpuz neden telefonunu kaybetmiş? Çünkü her zaman çok meşgulmüş!</li>
-            <li>Matematik kitabı neden üzgündü? Çünkü çok problemi varmış!</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
-
         <div id="espri-yorumlari">
-            <h3>Espriye Yorum Yapın:</h3>
+            <h3>Esprilerimize Yorum Yapın (LÜTFENN):</h3>
             <input type="text" id="yorum-input" placeholder="Bir yorum yazın...">
             <button onclick="yorumEkle()">Yorum Yap</button>
             <ul id="yorumlar"></ul>
         </div>
     </section>
-
     <section id="videolar">
-        <h2>Komik Videolar</h2>
+        <h2>Komik Videolar ve Fotolarr</h2>
         <div class="video-gallery">
             <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
 
-    <footer>
+    <footer>                   
         <p>&copy; 2025 Mizahım Ben -Küfürsüz Eğlencemiz Efendi Eğlencemiz</p>
     </footer>
 
@@ -197,7 +182,7 @@
         yorumlarListesi.appendChild(yeniYorum);
         yorumInput.value = '';
     } else {
-        alert("Lütfen geçerli bir yorum girin.");
+        alert("Yorum dedik BOŞLUK demedik ");
     }
 }
 
@@ -213,7 +198,6 @@ window.onload = function() {
         yorumlarListesi.appendChild(li);
     });
 }
-
     </script>
 </body>
 </html>
