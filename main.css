@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+/*Montserrat ve JetBrains Mono yazı tipleri*/
+button, [role=button]{cursor:pointer} /* buton buton gibi gözükmeli */
+*{
+    margin: 1px 2px;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: edited with js */
+}
+.birazcık-daha-kısa{
+    font-size: 14px;
+    margin-left: 2px;
+}
+.küçük-seçenek{
+    height: 20px;
+}
+
+header {
+    margin-left:5px;
+    margin-top: 3px;
+    border-style:ridge;
+    border-radius: 10px;
+    border-color: rgba(116, 95, 95, 0.096);
+    font-family: "JetBrains Mono";
+    
+  
+}
+#header-yazısı{
+margin-left: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  
+    
+}
+#bekleyen-hata-mesajı{
+    display: none; /* flex olmayı bekliyor */
+    border-style: double;
+    border-color: rgba(145, 143, 143, 0.171);
+    font-size: 12px;
+    font-family: JetBrains Mono;
+    border-radius: 10px;
+    position: fixed;
+    height: 170px;
+    width: 600px;
+    overflow-y: scroll;
+    left: 50%;            /* Move the left edge to the horizontal center */
+    transform: translateX(-50%); /* Shift the element back by half its width */
+    /* animation: pop 0.6s forwards;  aktif olmayı bekliyor */
+    z-index: 99;
+    overflow-wrap:anywhere;
+    flex-flow: column;
+    
+}
+@keyframes pop   {
+    from{
+bottom: 0;
+opacity: 0.2;
+    }
+    to{
+        bottom: 1.45vh
+    }
+}
+
+#hata-mesaji-kapat, #hata-mesaji-geribildirim{
+    font-family: montserrat;
+    border-radius: 20px;
+    font-size: 13px;
+    min-height: 3vh;
+    min-width:15vh;
+    color: white;
+    background-color: black;
+    border-style: none;
+    flex: 0 0 auto
+}
+#bekleyen-hata-mesajı-settingbar{display: flex;flex-flow: row;}
+#normal-ahref{color: white; text-decoration-line: none;}
