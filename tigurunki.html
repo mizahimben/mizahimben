@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizahım Ben</title>
+    <style>
+      
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        article p, ul li {
+            color: #666;
+        }
+
+        
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            margin: 10px;
+        }
+
+        .video-gallery iframe {
+            margin: 10px;
+            border: none;
+        }
+
+
+        #espri-yorumlari {
+            background-color: #ffeb3b;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        #espri-yorumlari input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 1rem;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #espri-yorumlari button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #espri-yorumlari button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+       .baslık {
+
+
+        background: #697c3b;
+        border-radius: 20px;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="baslık">"MizahımBEN"</h1>
+    <p>Bu site, Mizahım Ben'nin web sayfasıdır. Esprileri Kendimiz yazmaktayız. Bazıları derin anlamlar taşır. Kimseye karşı art niyetimiz bulunmamaktadır</p>
+    
+
+    </header>
+
+
+    <section id="espriler">
+        <h2>Espriler</h2>
+        <ul id="espri-listesi">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="espri-yorumlari">
+            <h3>Esprilerimize Yorum Yapın (LÜTFENN):</h3>
+            <input type="text" id="yorum-input" placeholder="Bir yorum yazın...">
+            <button onclick="yorumEkle()">Yorum Yap</button>
+            <ul id="yorumlar"></ul>
+        </div>
+    </section>
+    <section id="videolar">
+        <h2>Komik Videolar ve Fotolarr</h2>
+        <div class="video-gallery">
+            <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>                   
+        <p>&copy; 2025 Mizahım Ben -Küfürsüz Eğlencemiz Efendi Eğlencemiz</p>
+    </footer>
+
+    <script>
+    
+    function yorumEkle() {
+    var yorumInput = document.getElementById('yorum-input');
+    var yorumlarListesi = document.getElementById('yorumlar');
+    var yeniYorum = document.createElement('li');
+    yeniYorum.textContent = yorumInput.value;
+
+  
+    if (yorumInput.value.trim() !== "") {
+    
+        var yorumlar = JSON.parse(localStorage.getItem('yorumlar')) || [];
+        yorumlar.push(yorumInput.value);
+        localStorage.setItem('yorumlar', JSON.stringify(yorumlar));
+
+        yorumlarListesi.appendChild(yeniYorum);
+        yorumInput.value = '';
+    } else {
+        alert("Yorum dedik BOŞLUK demedik ");
+    }
+}
+
+// Umut Selam Olsun
+window.onload = function() {
+    var yorumlarListesi = document.getElementById('yorumlar');
+    var yorumlar = JSON.parse(localStorage.getItem('yorumlar')) || [];
+
+    
+    yorumlar.forEach(function(yorum) {
+        var li = document.createElement('li');
+        li.textContent = yorum;
+        yorumlarListesi.appendChild(li);
+    });
+}
+    </script>
+</body>
+</html>
